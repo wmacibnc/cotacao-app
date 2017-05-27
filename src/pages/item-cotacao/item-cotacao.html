@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalhe Cotação</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3 text-center *ngIf="selectedItem">
+    Moeda: {{selectedItem.nome}} - 
+    <ion-icon [name]="selectedItem.icon"></ion-icon>
+  </h3>
+  <h4 text-center *ngIf="selectedItem">
+    Valor: <b>{{selectedItem.valor}}</b>
+  </h4>
+  <h4 text-center *ngIf="selectedItem">
+    Fonte: <b>{{selectedItem.fonte}}</b>
+  </h4>
+</ion-content>
